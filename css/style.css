@@ -4,6 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
 /* UTILITYES */
 
 
@@ -18,8 +23,14 @@ main{
 aside.side-bar{
     width:200px;
     height: calc( 100vh - 70px );
-    background-color:purple;   
+    background-color:purple; 
+    overflow-y: auto;  
 }
+
+aside .logo{
+
+}
+
 
 /* TOP */
 section.top{
@@ -28,7 +39,29 @@ section.top{
     background-color:rgba(0, 0, 0, 0.69);
     align-self: flex-start;
     position:absolute;
-    top: 0;right: 0;
+    top: 0;
+    right: 0;
+    text-align:right;
+    display:flex;
+    justify-content:flex-end;
+}
+
+section.top .button{
+    width:200px;
+    height: 50px;
+    border: 2px solid #fff;
+    padding: 14px;
+    text-transform: uppercase;
+    border-radius:50px;
+    margin:10px
+}
+
+section.top .button a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    
 }
 
 
@@ -97,12 +130,11 @@ footer{
 @media screen and (max-width:766px){
     section.main-content .col{
         width: calc( 100% / 2 );
-        background-color: red;
     }
 }
 
 /* MD */
-@media screen and (max-width:1198px){
+@media screen and (max-width:1198px) and (min-width:767px){
     section.main-content .col{
         width: calc( 100% / 4 );
     }
