@@ -1,0 +1,69 @@
+/* SETUP */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* UTILITYES */
+
+
+
+
+
+
+/* TOP */
+section.top{
+    width: calc( 100vw - 200px);
+    height: 70px;
+    background-color:rgba(0, 0, 0, 0.69);
+    align-self: flex-start;
+    position:absolute;
+    top: 0;right: 0;
+}
+
+/* MAIN */
+main{
+    display:flex;
+}
+/* SIDE BAR */
+aside.side-bar{
+    width:200px;
+    height: calc( 100vh - 70px );
+    background-color:purple;
+    /* align-self: flex-start; */
+   
+}
+/* MAIN CONTENT */
+section.main-content{
+    width: calc( 100vw - 200px );
+    height: calc( 100vh - 70px );
+    background-color:dodgerblue;
+    align-self: flex-end;
+}
+/* FOOTER */
+footer{
+    height:70px;
+    background-color:violet;
+}
+
+
+
+
+
+
+
+
+
+/* MEDIA */
+@media screen and (max-width:600px){
+    aside.side-bar{
+        width:50px;
+    }
+    section.top{
+        width: calc( 100vw - 50px);
+    }
+    section.main-content{
+        width: calc( 100vw - 50px );
+    }
+
+}
