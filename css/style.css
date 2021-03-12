@@ -44,9 +44,8 @@ section.main-content{
 }
 
 section.main-content .row-collection{
-    
     display:flex;
-    
+    flex-wrap:wrap;
 }
 
 section.main-content .col{
@@ -94,9 +93,18 @@ footer{
 
 }
 
+/* SM */
+@media screen and (max-width:766px){
+    section.main-content .col{
+        width: calc( 100% / 2 );
+        background-color: red;
+    }
+}
+
 /* MD */
 @media screen and (max-width:1198px){
     section.main-content .col{
         width: calc( 100% / 4 );
     }
+
 }
