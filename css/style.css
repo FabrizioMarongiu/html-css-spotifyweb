@@ -74,6 +74,10 @@ aside.side-bar{
     display: flex;
     flex-direction: column;
 }
+
+aside.side-bar a:hover{
+    color: #fff;
+}
 aside.side-bar section.sidebar-top{
     /* height: 200px; */
     padding-bottom: 10px;
@@ -146,6 +150,7 @@ section.top{
     position:absolute;
     top: 0;
     right: 0;
+    z-index: 5;
     text-align:center;
     display:flex;
     justify-content:flex-end;
@@ -186,6 +191,11 @@ section.main-content{
     align-self: flex-end;
     overflow-y: auto;
     padding:0 10px;
+    position: relative;
+}
+
+section.main-content a:hover{
+    color:#fff;
 }
 
 div.main-padding{
@@ -194,8 +204,11 @@ div.main-padding{
 }
 
 .list-nav{
+    width:70%;
+    margin:20px auto 30px;
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -203,6 +216,11 @@ a.page{
     text-transform: uppercase;
     margin: 5px;
     text-decoration:none;
+}
+
+section.main-content div.list-nav .col-nav{
+    flex-basis: calc(100% / 6);
+    padding: 20px 0;
 }
 
 
@@ -224,9 +242,14 @@ section.main-content .col{
 
 section.main-content .album{
     height:200px;
-    background-color: goldenrod;
-    border: 1px solid black;
     position: relative;
+}
+
+.circle{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    overflow: hidden;
 }
 
 .album img{
@@ -279,29 +302,58 @@ footer{
 
 /* XS */
 @media screen and (max-width:600px){
+    
+    /* SIDE BAR */
     aside.side-bar{
         width:50px;
     }
+    aside.side-bar .xs-ghost{
+        display:none;
+    }
+    /* TOP */
     section.top{
         width: calc( 100vw - 50px);
     }
+    /* MAIN CONTENT */
     section.main-content{
         width: calc( 100vw - 50px );
     }
-
+    /* LIST NAV */
+    .list-nav{
+        width:100%;
+    }
+    section.main-content div.list-nav .col-nav{
+        flex-basis: calc(100% / 4);
+    }
 }
 
 /* SM */
-@media screen and (max-width:766px){
+@media screen and (max-width:766px) and (min-width:601px){
+     /* COLUM'S ALBUM */
     section.main-content .col{
         width: calc( 100% / 2 );
+    }
+    /* LIST NAV */
+    .list-nav{
+        width:100%;
+    }
+    section.main-content div.list-nav .col-nav{
+        flex-basis: calc(100% / 3);
     }
 }
 
 /* MD */
 @media screen and (max-width:1198px) and (min-width:767px){
+    /* COLUM'S ALBUM */
     section.main-content .col{
         width: calc( 100% / 4 );
     }
 
+    /* LIST NAV */
+    .list-nav{
+        width:100%;
+    }
+    section.main-content div.list-nav .col-nav{
+        flex-basis: calc(100% / 5);
+    }
 }
