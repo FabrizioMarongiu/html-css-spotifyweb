@@ -22,6 +22,10 @@ body{
     align-items:center;
 }
 
+.fs-10px{
+    font-size: 10px;
+}
+
 .fs-12px{
     font-size: 12px;
 }
@@ -83,6 +87,10 @@ body{
 
 .plr-10px{
     padding: 0 10px;
+}
+
+.mlr-10px{
+    margin: 0 10px;
 }
 
 /* HOVER TRANSFORM */
@@ -244,7 +252,7 @@ div.main-padding{
 }
 
 .list-nav{
-    width:70%;
+    width:65%;
     margin:20px auto 30px;
     display:flex;
     justify-content: space-around;
@@ -261,6 +269,7 @@ a.page{
 section.main-content div.list-nav .col-nav{
     flex-basis: calc(100% / 6);
     padding: 20px 0;
+    text-align: center;
 }
 
 
@@ -326,9 +335,9 @@ section.main-content .album{
 /* FOOTER */
 footer{
     height:70px;
-    background-color:violet;
+    background-color:#282828;
     display:flex;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: center;
 }
 
@@ -338,7 +347,7 @@ footer .track img{
 }
 
 section .keys a{
-    padding: 0 20px;
+    margin: 0 20px;
 }
 
 .player-bar .bar{
@@ -357,12 +366,29 @@ section .keys a{
     transition:1s;
 }
 
-a.bar:hover .green-bar{
+a.bar:hover .green-bar,
+a.volume-bar:hover .effective-vol{
     background-color:#adff2f;
 }
 
 footer .keys a.big-play{
     transition: .5s linear;
+}
+
+section.footer-audio a.volume-bar{
+    min-width: 150px;
+    height:3px;
+    border-radius:50px;
+    background-color:#5a5a5a;
+    margin:auto;
+}
+
+a.volume-bar .effective-vol{
+    width:25%;
+    height: 100%;
+    border-radius: 50px;
+    background-color:#c1c1c1;
+    transition:1s;
 }
 
 
