@@ -7,13 +7,17 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    /* font-size: 12px; */
 }
 /* UTILITYES */
 
 .align-center{
     display:flex; 
     align-items:center;
+}
+
+.fs-12px{
+    font-size: 12px;
 }
 
 .text-center{
@@ -37,7 +41,7 @@ body{
 }
 
 .bold{
-    font-weight: bold;
+    font-weight:700;
 }
 
 .small-icon-img{
@@ -51,12 +55,20 @@ body{
     text-decoration: none;
 }
 
+.pl-5{
+    padding-left: 5px;
+}
+
 .pl-10{
     padding-left: 10px;
 }
 
 .ptb-5{
     padding: 5px 0;
+}
+
+.ptb-10{
+    padding: 10px 0;
 }
 
 
@@ -73,6 +85,7 @@ aside.side-bar{
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 aside.side-bar a:hover{
@@ -86,6 +99,13 @@ aside.side-bar section.sidebar-top{
 aside .logo{
     width:140px;
     height:auto;
+    padding: 10px;
+}
+
+aside .mini-logo{
+    width:50px;
+    height:auto;
+    display:none;
     padding: 10px;
 }
 
@@ -115,6 +135,7 @@ section.element a.grey.align-center{
 ul li{
     margin-top: 15px;
     list-style: none;
+    font-size: 12px;
 }
 
 aside.side-bar sectin.main-content{
@@ -122,6 +143,8 @@ aside.side-bar sectin.main-content{
 }
 
 /* SIDE BOTTOM */
+
+
 section.side-bottom.grey .profile img{
     width:25px;
     height: 25px;
@@ -130,8 +153,6 @@ section.side-bottom.grey .profile img{
 }
 
 section.side-bottom.grey{
-    text-align: left;
-    width:80%;
     margin: 0 10px;
 }
 
@@ -241,13 +262,12 @@ section.main-content .col{
 }
 
 section.main-content .album{
-    height:200px;
     position: relative;
 }
 
 .circle{
     width:100%;
-    height:100%;
+    height:auto;
     border-radius:50%;
     overflow: hidden;
 }
@@ -288,7 +308,17 @@ section.main-content .album{
 footer{
     height:70px;
     background-color:violet;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
 }
+
+footer .track img{
+    width:50px;
+    height: 50px;
+}
+
+
 
 
 
@@ -310,6 +340,13 @@ footer{
     aside.side-bar .xs-ghost{
         display:none;
     }
+    aside .mini-logo{
+        display:inline-block;
+    }
+    .install{
+        border-bottom:0;
+    }
+
     /* TOP */
     section.top{
         width: calc( 100vw - 50px);
@@ -317,6 +354,9 @@ footer{
     /* MAIN CONTENT */
     section.main-content{
         width: calc( 100vw - 50px );
+    }
+    section.main-content .col{
+        width: calc( 100% / 2 );
     }
     /* LIST NAV */
     .list-nav{
