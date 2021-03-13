@@ -16,8 +16,18 @@ body{
     align-items:center;
 }
 
+.align-center-vertical{
+    display:flex;
+    flex-direction: column; 
+    align-items:center;
+}
+
 .fs-12px{
     font-size: 12px;
+}
+
+.fs-30px{
+    font-size: 30px;
 }
 
 .text-center{
@@ -69,6 +79,17 @@ body{
 
 .ptb-10{
     padding: 10px 0;
+}
+
+.plr-10px{
+    padding: 0 10px;
+}
+
+/* HOVER TRANSFORM */
+
+section.top div.button:hover,
+footer .keys a.big-play:hover{
+    transform: scale(1.2);
 }
 
 
@@ -198,9 +219,7 @@ section.top div.button{
     transition: .3s linear;
 }
 
-section.top div.button:hover{
-    transform: scale(1.2);
-}
+
 
 
 
@@ -318,8 +337,33 @@ footer .track img{
     height: 50px;
 }
 
+section .keys a{
+    padding: 0 20px;
+}
 
+.player-bar .bar{
+    min-width:250px;
+    height:3px;
+    border-radius: 50px;
+    background-color:#5a5a5a;
+    margin:auto;
+}
 
+ .green-bar{
+    width:30%;
+    height:100%;
+    border-radius: 50px;
+    background-color:#c1c1c1;
+    transition:1s;
+}
+
+a.bar:hover .green-bar{
+    background-color:#adff2f;
+}
+
+footer .keys a.big-play{
+    transition: .5s linear;
+}
 
 
 
