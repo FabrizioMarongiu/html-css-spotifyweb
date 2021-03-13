@@ -100,6 +100,17 @@ footer .keys a.big-play:hover{
     transform: scale(1.2);
 }
 
+aside.side-bar a:hover,
+section.main-content a:hover,
+footer a:hover,
+footer a:hover i{
+    color: #fff;
+}
+
+a.bar:hover .green-bar,
+a.volume-bar:hover .effective-vol{
+    background-color:#adff2f;
+}
 
 /* MAIN */
 main{
@@ -117,9 +128,7 @@ aside.side-bar{
     justify-content: space-between;
 }
 
-aside.side-bar a:hover{
-    color: #fff;
-}
+
 aside.side-bar section.sidebar-top{
     /* height: 200px; */
     padding-bottom: 10px;
@@ -136,6 +145,10 @@ aside .mini-logo{
     height:auto;
     display:none;
     padding: 10px;
+}
+
+.bord-left{
+    border-left: 3px solid #adff2f;;
 }
 
 /* aside .playlist{
@@ -242,10 +255,6 @@ section.main-content{
     position: relative;
 }
 
-section.main-content a:hover{
-    color:#fff;
-}
-
 div.main-padding{
     width:100%;
     height:75px;
@@ -264,6 +273,13 @@ a.page{
     text-transform: uppercase;
     margin: 5px;
     text-decoration:none;
+}
+
+.selected{
+    width:30%;
+    height:3px;
+    background-color: #adff2f;
+    margin:3px auto;
 }
 
 section.main-content div.list-nav .col-nav{
@@ -341,17 +357,29 @@ footer{
     align-items: center;
 }
 
+footer .track{
+    width:25%;
+}
+
 footer .track img{
     width:50px;
-    height: 50px;
+    height: 55px;
 }
 
 section .keys a{
     margin: 0 20px;
 }
 
-.player-bar .bar{
-    min-width:250px;
+footer .footer-player{
+    /* width: calc(100% / 3); */
+    width:50%;
+}
+
+.player-bar{
+    width:70%
+
+} .bar{
+    width:70%;
     height:3px;
     border-radius: 50px;
     background-color:#5a5a5a;
@@ -366,17 +394,19 @@ section .keys a{
     transition:1s;
 }
 
-a.bar:hover .green-bar,
-a.volume-bar:hover .effective-vol{
-    background-color:#adff2f;
-}
+
 
 footer .keys a.big-play{
     transition: .5s linear;
 }
 
+footer .footer-audio{
+    width: 20%;
+    text-align: right;
+}
+
 section.footer-audio a.volume-bar{
-    min-width: 150px;
+    width: 70%;
     height:3px;
     border-radius:50px;
     background-color:#5a5a5a;
@@ -435,6 +465,10 @@ a.volume-bar .effective-vol{
     section.main-content div.list-nav .col-nav{
         flex-basis: calc(100% / 4);
     }
+    /* FOOTER */
+    section .keys a{
+        margin: 0 5px;
+    }
 }
 
 /* SM */
@@ -450,6 +484,10 @@ a.volume-bar .effective-vol{
     section.main-content div.list-nav .col-nav{
         flex-basis: calc(100% / 3);
     }
+   /* FOOTER */
+    section .keys a{
+        margin: 0 10px;
+    } 
 }
 
 /* MD */
@@ -458,7 +496,6 @@ a.volume-bar .effective-vol{
     section.main-content .col{
         width: calc( 100% / 4 );
     }
-
     /* LIST NAV */
     .list-nav{
         width:100%;
