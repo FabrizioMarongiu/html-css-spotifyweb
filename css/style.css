@@ -11,7 +11,53 @@ body{
 }
 /* UTILITYES */
 
+.align-center{
+    display:flex; 
+    align-items:center;
+}
 
+.text-center{
+    text-align:center;
+}
+
+.flex-start{
+    justify-content: flex-start;
+}
+
+.maiusc{
+    text-transform: uppercase;
+}
+
+.white{
+    color: #fff;
+}
+
+.grey{
+    color:#a3a3a3; 
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.small-icon-img{
+    width: 20px;
+    height: 20px;
+    fill:#a3a3a3; 
+}
+
+ a,
+ a.a-nodeco{
+    text-decoration: none;
+}
+
+.pl-10{
+    padding-left: 10px;
+}
+
+.ptb-5{
+    padding: 5px 0;
+}
 
 
 /* MAIN */
@@ -23,13 +69,72 @@ main{
 aside.side-bar{
     width:200px;
     height: calc( 100vh - 70px );
-    background-color:purple; 
-    overflow-y: auto;  
+    background-color:#000000; 
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+aside.side-bar section.sidebar-top{
+    /* height: 200px; */
+    padding-bottom: 10px;
 }
 
 aside .logo{
-
+    width:140px;
+    height:auto;
+    padding: 10px;
 }
+
+/* aside .playlist{
+    height:500px;
+    
+} */
+
+.element{
+    padding: 10px;
+}
+.element a img{
+    width:30px;
+    fill: rgb(207, 21, 21);
+}
+
+
+section.element a.grey.align-center i{
+    font-size: 40px;
+    padding-right: 5px;
+}
+
+section.element a.grey.align-center{
+    padding-top: 10px;
+}
+
+ul li{
+    margin-top: 15px;
+    list-style: none;
+}
+
+aside.side-bar sectin.main-content{
+    align-items: flex-end;
+}
+
+/* SIDE BOTTOM */
+section.side-bottom.grey .profile img{
+    width:25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color:#808080;
+}
+
+section.side-bottom.grey{
+    text-align: left;
+    width:80%;
+    margin: 0 10px;
+}
+
+.install{
+    border-bottom: 1px solid #a3a3a3;
+}
+
 
 
 /* TOP */
@@ -41,19 +146,19 @@ section.top{
     position:absolute;
     top: 0;
     right: 0;
-    text-align:right;
+    text-align:center;
     display:flex;
     justify-content:flex-end;
 }
 
 section.top .button{
     width:200px;
-    height: 50px;
+    height: 30px;
     border: 2px solid #fff;
-    padding: 14px;
+    padding: 4px;
     text-transform: uppercase;
     border-radius:50px;
-    margin:10px
+    margin:20px
 }
 
 section.top .button a{
@@ -61,7 +166,14 @@ section.top .button a{
     text-decoration: none;
     font-size: 14px;
     text-align: center;
-    
+}
+
+section.top div.button{
+    transition: .3s linear;
+}
+
+section.top div.button:hover{
+    transform: scale(1.2);
 }
 
 
@@ -70,15 +182,39 @@ section.top .button a{
 section.main-content{
     width: calc( 100vw - 200px );
     height: calc( 100vh - 70px );
-    background-color:dodgerblue;
+    background-color:#141922;
     align-self: flex-end;
-    padding-top: 140px;
     overflow-y: auto;
+    padding:0 10px;
 }
 
+div.main-padding{
+    width:100%;
+    height:75px;
+}
+
+.list-nav{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.page{
+    text-transform: uppercase;
+    margin: 5px;
+    text-decoration:none;
+}
+
+
+
 section.main-content .row-collection{
+    padding-top: 20px;
     display:flex;
     flex-wrap:wrap;
+}
+
+section.main-content .row-collection:last-child{
+    padding-bottom: 20px;
 }
 
 section.main-content .col{
@@ -87,11 +223,40 @@ section.main-content .col{
 }
 
 section.main-content .album{
-    
     height:200px;
     background-color: goldenrod;
     border: 1px solid black;
-    
+    position: relative;
+}
+
+.album img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.album a.play{
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition:1s;
+}
+
+.album a.play i{
+    font-size:60px;
+    color:#fff;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.album:hover a.play{
+   opacity:1;
 }
 
 
