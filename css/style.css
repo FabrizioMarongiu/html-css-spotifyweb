@@ -64,6 +64,18 @@ body{
     fill:#a3a3a3; 
 }
 
+.svg-icon{
+    width: 70px;
+    height: 20px;
+    fill:#a3a3a3; 
+}
+
+.svg-icon2{
+    width: 60px;
+    height: 20px;
+    fill:#a3a3a3; 
+}
+
  a,
  a.a-nodeco{
     text-decoration: none;
@@ -107,9 +119,21 @@ footer a:hover i{
     color: #fff;
 }
 
+.album:hover a.play{
+    opacity:1;
+ }
+
 a.bar:hover .green-bar,
 a.volume-bar:hover .effective-vol{
     background-color:#adff2f;
+}
+
+.bar:hover .level{
+    opacity: 1;
+}
+
+.volume-bar:hover .level-volume{
+    opacity: 1;
 }
 
 /* MAIN */
@@ -159,10 +183,11 @@ aside .mini-logo{
 .element{
     padding: 10px;
 }
-.element a img{
-    width:30px;
-    fill: rgb(207, 21, 21);
-}
+
+/* svg>path{
+    font-size: 10px;
+    fill: red;
+} */
 
 
 section.element a.grey.align-center i{
@@ -237,7 +262,7 @@ section.top .button a{
 }
 
 section.top div.button{
-    transition: .3s linear;
+    transition: .5s linear;
 }
 
 
@@ -287,8 +312,6 @@ section.main-content div.list-nav .col-nav{
     padding: 20px 0;
     text-align: center;
 }
-
-
 
 section.main-content .row-collection{
     padding-top: 20px;
@@ -342,12 +365,6 @@ section.main-content .album{
     transform: translate(-50%, -50%);
 }
 
-.album:hover a.play{
-   opacity:1;
-}
-
-
-
 /* FOOTER */
 footer{
     height:70px;
@@ -380,7 +397,7 @@ footer .footer-player{
 
 } .bar{
     width:70%;
-    height:3px;
+    height:4px;
     border-radius: 50px;
     background-color:#5a5a5a;
     margin:auto;
@@ -391,13 +408,18 @@ footer .footer-player{
     height:100%;
     border-radius: 50px;
     background-color:#c1c1c1;
-    transition:1s;
+    position: relative;
 }
 
-
+.level{
+    position:absolute;
+    left:85%;
+    bottom:-9px;
+    opacity:0;
+}
 
 footer .keys a.big-play{
-    transition: .5s linear;
+    transition: .3s linear;
 }
 
 footer .footer-audio{
@@ -407,7 +429,7 @@ footer .footer-audio{
 
 section.footer-audio a.volume-bar{
     width: 70%;
-    height:3px;
+    height:4px;
     border-radius:50px;
     background-color:#5a5a5a;
     margin:auto;
@@ -418,7 +440,14 @@ a.volume-bar .effective-vol{
     height: 100%;
     border-radius: 50px;
     background-color:#c1c1c1;
-    transition:1s;
+    position: relative;
+}
+
+.level-volume{
+    position: absolute;
+    left:85%;
+    bottom: -9px;
+    opacity: 0;
 }
 
 
