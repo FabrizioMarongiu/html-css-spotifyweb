@@ -70,12 +70,6 @@ body{
     fill:#a3a3a3; 
 }
 
-.svg-icon2{
-    width: 60px;
-    height: 20px;
-    fill:#a3a3a3; 
-}
-
  a,
  a.a-nodeco{
     text-decoration: none;
@@ -146,15 +140,14 @@ aside.side-bar{
     width:200px;
     height: calc( 100vh - 70px );
     background-color:#000000; 
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    position: relative;
 }
 
 
 aside.side-bar section.sidebar-top{
-    /* height: 200px; */
+    height: 200px;
     padding-bottom: 10px;
 }
 
@@ -162,6 +155,9 @@ aside .logo{
     width:140px;
     height:auto;
     padding: 10px;
+}
+section.sidebar-middle{
+    height:50%;
 }
 
 aside .mini-logo{
@@ -175,10 +171,12 @@ aside .mini-logo{
     border-left: 3px solid #adff2f;;
 }
 
-/* aside .playlist{
-    height:500px;
-    
-} */
+
+
+aside .playlist{
+    height:200px;
+    overflow-y:auto;
+}
 
 .element{
     padding: 10px;
@@ -205,9 +203,9 @@ ul li{
     font-size: 12px;
 }
 
-aside.side-bar sectin.main-content{
+/* aside.side-bar section.main-content{
     align-items: flex-end;
-}
+} */
 
 /* SIDE BOTTOM */
 
@@ -220,7 +218,11 @@ section.side-bottom.grey .profile img{
 }
 
 section.side-bottom.grey{
+    height:100px;
     margin: 0 10px;
+    overflow:hidden;
+    position:absolute;
+    bottom:0;
 }
 
 .install{
@@ -372,6 +374,7 @@ footer{
     display:flex;
     justify-content:space-between;
     align-items: center;
+    z-index: 10;
 }
 
 footer .track{
@@ -388,14 +391,14 @@ section .keys a{
 }
 
 footer .footer-player{
-    /* width: calc(100% / 3); */
     width:50%;
 }
 
 .player-bar{
     width:70%
+}
 
-} .bar{
+.bar{
     width:70%;
     height:4px;
     border-radius: 50px;
@@ -475,7 +478,9 @@ a.volume-bar .effective-vol{
     .install{
         border-bottom:0;
     }
-
+    .svg-icon{
+        width: 30px;
+    }
     /* TOP */
     section.top{
         width: calc( 100vw - 50px);
@@ -498,6 +503,17 @@ a.volume-bar .effective-vol{
     section .keys a{
         margin: 0 5px;
     }
+    footer .footer-player{
+        width:36%;
+    }
+    footer .track{
+        width:32%;
+    }
+    footer .footer-audio{
+        width: 32%;
+        text-align: right;
+    }
+    
 }
 
 /* SM */
@@ -516,7 +532,17 @@ a.volume-bar .effective-vol{
    /* FOOTER */
     section .keys a{
         margin: 0 10px;
-    } 
+    }
+    footer .footer-player{
+        width:40%;
+    }
+    footer .track{
+        width:30%;
+    }
+    footer .footer-audio{
+        width: 30%;
+        text-align: right;
+    }
 }
 
 /* MD */
