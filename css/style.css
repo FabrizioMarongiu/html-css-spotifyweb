@@ -100,7 +100,6 @@ body{
 }
 
 /* HOVER TRANSFORM */
-
 section.top div.button:hover,
 footer .keys a.big-play:hover{
     transform: scale(1.2);
